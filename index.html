@@ -55,7 +55,10 @@
 
         /* Header */
         header {
-            background: var(--dark);
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('facade-le-kiosque.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             padding: 30px 20px;
             text-align: center;
             border-bottom: 3px solid var(--yellow);
@@ -74,6 +77,7 @@
         .logo {
             width: 120px;
             height: 120px;
+            filter: drop-shadow(0 0 20px rgba(0,0,0,0.9)) drop-shadow(0 0 40px rgba(0,0,0,0.7));
         }
 
         .restaurant-name {
@@ -81,6 +85,10 @@
             color: var(--yellow);
             font-weight: bold;
             text-transform: uppercase;
+            text-shadow: 
+                0 0 20px rgba(0,0,0,1),
+                0 0 40px rgba(0,0,0,0.8),
+                3px 3px 10px rgba(0,0,0,0.9);
         }
 
         .header-info {
@@ -89,6 +97,9 @@
             flex-wrap: wrap;
             justify-content: center;
             font-size: 1.1rem;
+            text-shadow: 
+                0 0 10px rgba(0,0,0,1),
+                2px 2px 5px rgba(0,0,0,0.9);
         }
 
         .info-item {
@@ -99,6 +110,9 @@
 
         .info-item strong {
             color: var(--yellow);
+            text-shadow: 
+                0 0 10px rgba(0,0,0,1),
+                2px 2px 5px rgba(0,0,0,0.9);
         }
 
         /* Container */
@@ -327,36 +341,20 @@
         <h2 class="main-title">🍕 Notre Menu 🍕</h2>
         
         <div class="cards-grid">
-            <!-- Pizza 5€ -->
-            <div class="category-card" onclick="showSection('pizzas5')">
+            <!-- Pizzas -->
+            <div class="category-card" onclick="showSection('pizzas')">
                 <div class="category-icon">🍕</div>
-                <h3 class="category-title">PIZZAS</h3>
-                <div class="category-price">5€</div>
-                <p class="category-description">Nos pizzas classiques</p>
+                <h3 class="category-title">NOS PIZZAS</h3>
+                <div class="category-price">Dès 5€</div>
+                <p class="category-description">Toutes nos pizzas artisanales</p>
             </div>
 
-            <!-- Pizza 7€ -->
-            <div class="category-card" onclick="showSection('pizzas7')">
-                <div class="category-icon">🍕</div>
-                <h3 class="category-title">PIZZAS</h3>
-                <div class="category-price">7€</div>
-                <p class="category-description">Nos pizzas premium</p>
-            </div>
-
-            <!-- Gratins 5€ -->
-            <div class="category-card" onclick="showSection('gratins5')">
+            <!-- Gratins -->
+            <div class="category-card" onclick="showSection('gratins')">
                 <div class="category-icon">🥘</div>
-                <h3 class="category-title">GRATINS</h3>
-                <div class="category-price">5€</div>
-                <p class="category-description">Gratins classiques</p>
-            </div>
-
-            <!-- Gratins 7€ -->
-            <div class="category-card" onclick="showSection('gratins7')">
-                <div class="category-icon">🥘</div>
-                <h3 class="category-title">GRATINS</h3>
-                <div class="category-price">7,50€</div>
-                <p class="category-description">Gratins spéciaux</p>
+                <h3 class="category-title">NOS GRATINS</h3>
+                <div class="category-price">Dès 5€</div>
+                <p class="category-description">Gratins classiques et spéciaux</p>
             </div>
 
             <!-- Paninis -->
@@ -385,114 +383,264 @@
         </div>
     </div>
 
-    <!-- Section Pizzas 5€ -->
-    <div class="container content-section" id="pizzas5">
+    <!-- Section Pizzas (toutes) -->
+    <div class="container content-section" id="pizzas">
         <button class="back-button" onclick="showMainMenu()">← Retour au menu</button>
-        <h2 class="section-title">🍕 Pizzas à 5€ 🍕</h2>
-        <div class="products-list">
-            <div class="product-item">
-                <div class="product-name">MARGHERITA</div>
-                <div class="product-ingredients">Sauce tomate, fromage</div>
-                <div class="product-price">5€</div>
+        <h2 class="section-title">🍕 Nos Pizzas 🍕</h2>
+        
+        <!-- Pizzas à 5€ -->
+        <div style="margin-bottom: 60px;">
+            <h3 style="font-size: 2rem; color: var(--yellow); margin-bottom: 30px; text-align: center; border-bottom: 2px solid var(--red); padding-bottom: 10px;">
+                Nos Pizzas à 5€
+            </h3>
+            <div class="products-list">
+                <div class="product-item">
+                    <div class="product-name">MARGHERITA</div>
+                    <div class="product-ingredients">Sauce tomate, fromage</div>
+                    <div class="product-price">5€</div>
+                </div>
             </div>
-            <!-- Plus de pizzas à 5€ si nécessaire -->
+        </div>
+
+        <!-- Pizzas à 7€ et plus -->
+        <div>
+            <h3 style="font-size: 2rem; color: var(--yellow); margin-bottom: 30px; text-align: center; border-bottom: 2px solid var(--red); padding-bottom: 10px;">
+                Nos Pizzas à partir de 7€
+            </h3>
+            <div class="products-list">
+                <div class="product-item">
+                    <div class="product-name">MARGHERITA</div>
+                    <div class="product-ingredients">Sauce tomate, fromage</div>
+                    <div class="product-price">7€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">REINE</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, jambon, champignons</div>
+                    <div class="product-price">8€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">VÉGÉTARIENNE</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, champignons, poivrons, olives</div>
+                    <div class="product-price">8€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">MERGUEZ</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, merguez, oignons</div>
+                    <div class="product-price">8€50</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">VIANDE HACHÉE</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, viande hachée, pommes de terre</div>
+                    <div class="product-price">8€50</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">CALZONE (Soufflée)</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, œuf, jambon ou viande hachée ou thon</div>
+                    <div class="product-price">9€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">ORIENTALE</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, œuf, poivrons, merguez</div>
+                    <div class="product-price">9€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">SICILIENNE</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, câpres, anchois, olives</div>
+                    <div class="product-price">8€50</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">FRUITS DE MER</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, fruits de mer, ail, persil</div>
+                    <div class="product-price">10€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">KEBAB</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, kebab, pommes de terre</div>
+                    <div class="product-price">9€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">BURGER</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, viande hachée, cheddar, oignons</div>
+                    <div class="product-price">9€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">CAMPIONE</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, viande hachée, œuf, champignons</div>
+                    <div class="product-price">9€50</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">SAUMON</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, jambon, champignons, artichauts, olives</div>
+                    <div class="product-price">9€50</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">GAMBEI</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, viande hachée, merguez, chorizo, sauce barbecue</div>
+                    <div class="product-price">10€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">BUFFALO</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, viande hachée, merguez, oignons, sauce barbecue</div>
+                    <div class="product-price">9€50</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">PIMENTO</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, poulet mariné, pepperoni, piments, poivrons</div>
+                    <div class="product-price">9€50</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">MEXICAINE</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, viande hachée, merguez, poivrons, piments, sauce barbecue</div>
+                    <div class="product-price">10€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">CHICKEN</div>
+                    <div class="product-ingredients">Crème fraîche, fromage, poulet, pommes de terre, oignons rouges</div>
+                    <div class="product-price">9€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">TEXANE</div>
+                    <div class="product-ingredients">Crème fraîche, fromage, jambon, poulet</div>
+                    <div class="product-price">8€50</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">PAYSANNE</div>
+                    <div class="product-ingredients">Crème fraîche, fromage, jambon, poulet, oignons rouges</div>
+                    <div class="product-price">9€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">MIAMI</div>
+                    <div class="product-ingredients">Crème fraîche, fromage, viande hachée, champignons</div>
+                    <div class="product-price">8€50</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">CAMPAGNARDE</div>
+                    <div class="product-ingredients">Crème fraîche, fromage, jambon, pommes de terre, oignons rouges</div>
+                    <div class="product-price">8€50</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">4 FROMAGES</div>
+                    <div class="product-ingredients">Crème fraîche, mozzarella, chèvre, brie, bleu</div>
+                    <div class="product-price">9€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">TARTIFLETTE</div>
+                    <div class="product-ingredients">Crème fraîche, fromage, lardons, pommes de terre, oignons, reblochon</div>
+                    <div class="product-price">9€50</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">CHÈVRE MIEL</div>
+                    <div class="product-ingredients">Crème fraîche, fromage, chèvre, miel</div>
+                    <div class="product-price">9€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">BOURSIN</div>
+                    <div class="product-ingredients">Crème fraîche, fromage, viande hachée, pommes de terre, boursin</div>
+                    <div class="product-price">9€50</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">CHICAGO BACON</div>
+                    <div class="product-ingredients">Crème fraîche, fromage, viande hachée, poulet, jambon, cheddar</div>
+                    <div class="product-price">10€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">BOLLYWOOD</div>
+                    <div class="product-ingredients">Crème fraîche, fromage, poulet mariné, poivrons, oignons rouges, sauce curry</div>
+                    <div class="product-price">9€50</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">NORVÉGIENNE</div>
+                    <div class="product-ingredients">Crème fraîche, fromage, saumon</div>
+                    <div class="product-price">11€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">RACLETTE</div>
+                    <div class="product-ingredients">Crème fraîche, fromage, jambon, pommes de terre, oignons, raclette</div>
+                    <div class="product-price">9€50</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">TACOS</div>
+                    <div class="product-ingredients">Crème fraîche, fromage, poulet, viande hachée, poivrons, sauce tomatée</div>
+                    <div class="product-price">9€50</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">FERMIÈRE</div>
+                    <div class="product-ingredients">Crème fraîche, fromage, poulet, pommes de terre, champignons</div>
+                    <div class="product-price">9€</div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Section Pizzas 7€ -->
-    <div class="container content-section" id="pizzas7">
+    <!-- Section Gratins (tous) -->
+    <div class="container content-section" id="gratins">
         <button class="back-button" onclick="showMainMenu()">← Retour au menu</button>
-        <h2 class="section-title">🍕 Pizzas à partir de 7€ 🍕</h2>
-        <div class="products-list">
-            <div class="product-item">
-                <div class="product-name">REINE</div>
-                <div class="product-ingredients">Sauce tomate, fromage, jambon, champignons</div>
-                <div class="product-price">8€</div>
+        <h2 class="section-title">🥘 Nos Gratins 🥘</h2>
+        
+        <!-- Gratins à 5€ -->
+        <div style="margin-bottom: 60px;">
+            <h3 style="font-size: 2rem; color: var(--yellow); margin-bottom: 30px; text-align: center; border-bottom: 2px solid var(--red); padding-bottom: 10px;">
+                Nos Gratins à 5€
+            </h3>
+            <div class="products-list">
+                <div class="product-item">
+                    <div class="product-name">GRATIN CLASSIQUE</div>
+                    <div class="product-ingredients">Pommes de terre à la crème avec reblochon<br>
+                    Au choix : Lardons, Viande hachée, Poulet, 3 fromages ou Jambon</div>
+                    <div class="product-price">5€</div>
+                </div>
             </div>
-            <div class="product-item">
-                <div class="product-name">VÉGÉTARIENNE</div>
-                <div class="product-ingredients">Sauce tomate, fromage, champignons, poivrons, olives</div>
-                <div class="product-price">8€</div>
-            </div>
-            <div class="product-item">
-                <div class="product-name">MERGUEZ</div>
-                <div class="product-ingredients">Sauce tomate, fromage, merguez, oignons</div>
-                <div class="product-price">8€50</div>
-            </div>
-            <div class="product-item">
-                <div class="product-name">CALZONE</div>
-                <div class="product-ingredients">Pizza soufflée : sauce tomate, fromage, œuf, jambon ou viande ou thon</div>
-                <div class="product-price">9€</div>
-            </div>
-            <div class="product-item">
-                <div class="product-name">4 FROMAGES</div>
-                <div class="product-ingredients">Crème fraîche, mozzarella, chèvre, brie, bleu</div>
-                <div class="product-price">9€</div>
-            </div>
-            <div class="product-item">
-                <div class="product-name">TARTIFLETTE</div>
-                <div class="product-ingredients">Crème fraîche, fromage, lardons, pommes de terre, oignons, reblochon</div>
-                <div class="product-price">9€50</div>
-            </div>
-            <div class="product-item">
-                <div class="product-name">NORVÉGIENNE</div>
-                <div class="product-ingredients">Crème fraîche, fromage, saumon</div>
-                <div class="product-price">11€</div>
-            </div>
+            <p style="text-align: center; color: var(--yellow); margin-top: 20px; font-size: 1.1rem;">
+                💡 Menu avec boisson : 6€
+            </p>
         </div>
-    </div>
 
-    <!-- Section Gratins 5€ -->
-    <div class="container content-section" id="gratins5">
-        <button class="back-button" onclick="showMainMenu()">← Retour au menu</button>
-        <h2 class="section-title">🥘 Gratins à 5€ 🥘</h2>
-        <div class="products-list">
-            <div class="product-item">
-                <div class="product-name">GRATIN CLASSIQUE</div>
-                <div class="product-ingredients">Pommes de terre à la crème avec reblochon<br>
-                Au choix : Lardons, Viande hachée, Poulet, 3 fromages ou Jambon</div>
-                <div class="product-price">5€</div>
+        <!-- Gratins à 7,50€ -->
+        <div>
+            <h3 style="font-size: 2rem; color: var(--yellow); margin-bottom: 30px; text-align: center; border-bottom: 2px solid var(--red); padding-bottom: 10px;">
+                Nos Gratins Spéciaux à 7,50€
+            </h3>
+            <div class="products-list">
+                <div class="product-item">
+                    <div class="product-name">BOURSIN</div>
+                    <div class="product-ingredients">Viande hachée, champignons, boursin</div>
+                    <div class="product-price">7€50</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">MEXICAIN</div>
+                    <div class="product-ingredients">Viande hachée, chorizo, poivrons, piments</div>
+                    <div class="product-price">7€50</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">RACLETTE</div>
+                    <div class="product-ingredients">Jambon, lardons, raclette</div>
+                    <div class="product-price">7€50</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">CHICKEN CURRY</div>
+                    <div class="product-ingredients">Poulet mariné, poivrons, oignons rouges, sauce curry</div>
+                    <div class="product-price">7€50</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">BURGER</div>
+                    <div class="product-ingredients">Viande hachée, cheddar, oignons</div>
+                    <div class="product-price">7€50</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">FROMAGE</div>
+                    <div class="product-ingredients">3 fromages fondus</div>
+                    <div class="product-price">7€50</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">BRAISONS</div>
+                    <div class="product-ingredients">Spécialité maison</div>
+                    <div class="product-price">7€50</div>
+                </div>
             </div>
+            <p style="text-align: center; color: var(--yellow); margin-top: 20px; font-size: 1.1rem;">
+                💡 Menu avec boisson : 8€
+            </p>
         </div>
-        <p style="text-align: center; color: var(--yellow); margin-top: 30px; font-size: 1.2rem;">
-            💡 Menu avec boisson : 6€
-        </p>
-    </div>
-
-    <!-- Section Gratins 7,50€ -->
-    <div class="container content-section" id="gratins7">
-        <button class="back-button" onclick="showMainMenu()">← Retour au menu</button>
-        <h2 class="section-title">🥘 Gratins Spéciaux à 7,50€ 🥘</h2>
-        <div class="products-list">
-            <div class="product-item">
-                <div class="product-name">BOURSIN</div>
-                <div class="product-ingredients">Viande hachée, champignons, boursin</div>
-                <div class="product-price">7€50</div>
-            </div>
-            <div class="product-item">
-                <div class="product-name">MEXICAIN</div>
-                <div class="product-ingredients">Viande hachée, chorizo, poivrons, piments</div>
-                <div class="product-price">7€50</div>
-            </div>
-            <div class="product-item">
-                <div class="product-name">RACLETTE</div>
-                <div class="product-ingredients">Jambon, lardons, raclette</div>
-                <div class="product-price">7€50</div>
-            </div>
-            <div class="product-item">
-                <div class="product-name">CHICKEN CURRY</div>
-                <div class="product-ingredients">Poulet mariné, poivrons, oignons rouges, sauce curry</div>
-                <div class="product-price">7€50</div>
-            </div>
-            <div class="product-item">
-                <div class="product-name">BURGER</div>
-                <div class="product-ingredients">Viande hachée, cheddar, oignons</div>
-                <div class="product-price">7€50</div>
-            </div>
-        </div>
-        <p style="text-align: center; color: var(--yellow); margin-top: 30px; font-size: 1.2rem;">
-            💡 Menu avec boisson : 8€
-        </p>
     </div>
 
     <!-- Section Paninis -->
