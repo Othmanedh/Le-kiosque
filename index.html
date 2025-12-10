@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
     <title>Le Kiosque Chelles - Pizzeria 77500 | Pizza dès 5€</title>
-    <meta name="description" content="Pizzeria Le Kiosque à Chelles (77500). Pizzas artisanales dès 5€, gratins, paninis, tex-mex. Ouvert 7j/7. Commandez au 01 64 26 72 13.">
-    <meta name="keywords" content="pizzeria Chelles, pizza Chelles, Le Kiosque Chelles, pizza 5 euros Chelles, pizzeria 77500, restaurant Chelles, livraison pizza Chelles, à emporter Chelles">
-    <meta name="robots" content="index, follow">
-    <meta name="geo.region" content="FR-77">
-    <meta name="geo.placename" content="Chelles">
+    <meta name="description" content="Le Kiosque - Pizzeria à Chelles (77500). Pizzas artisanales dès 5€, gratins, paninis. Ouvert 7/7. Commandez au 01 64 26 72 13">
+    <meta name="keywords" content="pizzeria Chelles, pizza Chelles, Le Kiosque Chelles, pizza 5 euros, pizzeria 77500, gratins Chelles, livraison pizza Chelles">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Le Kiosque Chelles - Pizzeria 77500">
+    <meta property="og:description" content="Pizzas artisanales dès 5€, gratins et paninis. Ouvert 7/7">
+    <meta property="og:type" content="restaurant">
     
     <!-- Schema.org -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "Restaurant",
-      "name": "Le Kiosque",
-      "description": "Pizzeria artisanale à Chelles",
-      "telephone": "01 64 26 72 13",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Chelles",
-        "postalCode": "77500",
-        "addressCountry": "FR"
-      },
-      "priceRange": "€",
-      "servesCuisine": "Pizza"
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Le Kiosque",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "50 Rue Gambetta",
+            "addressLocality": "Chelles",
+            "postalCode": "77500",
+            "addressCountry": "FR"
+        },
+        "telephone": "+33164267213",
+        "servesCuisine": "Pizza, Italian",
+        "priceRange": "€"
     }
     </script>
-
+    
     <style>
         * {
             margin: 0;
@@ -51,20 +51,21 @@
             background: var(--black);
             color: var(--white);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* Header */
+        /* Header avec photo de façade */
         header {
-            background: var(--dark);
-            padding: 30px 20px;
-            text-align: center;
-            border-bottom: 3px solid var(--yellow);
-            box-shadow: 0 5px 20px rgba(255, 215, 10, 0.3);
             position: relative;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
             overflow: hidden;
         }
-        
-        /* Image d'arrière-plan en HTML */
+
         .header-background {
             position: absolute;
             top: 0;
@@ -72,65 +73,65 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center;
+            object-position: center center;
             z-index: 0;
-            opacity: 1;
         }
 
         .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
             position: relative;
             z-index: 1;
+            max-width: 1200px;
+            width: 100%;
         }
 
         .logo {
-            width: 120px;
-            height: 120px;
-            filter: drop-shadow(0 0 30px rgba(0,0,0,1)) drop-shadow(0 0 60px rgba(0,0,0,0.9));
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 30px;
+            filter: drop-shadow(0 0 30px rgba(0,0,0,1));
         }
 
         .restaurant-name {
-            font-size: 2.5rem;
+            font-size: 4rem;
+            font-weight: bold;
+            color: var(--yellow);
+            margin-bottom: 20px;
+            text-shadow: 
+                3px 3px 0 var(--red),
+                0 0 30px rgba(0,0,0,1),
+                0 0 40px rgba(0,0,0,1),
+                0 0 50px rgba(0,0,0,1),
+                0 0 60px rgba(0,0,0,1);
+        }
+
+        .restaurant-info {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .phone {
+            font-size: 2rem;
             color: var(--yellow);
             font-weight: bold;
-            text-transform: uppercase;
-            text-shadow: 
-                0 0 30px rgba(0,0,0,1),
-                0 0 60px rgba(0,0,0,0.9),
-                3px 3px 15px rgba(0,0,0,1),
-                -3px -3px 15px rgba(0,0,0,0.8);
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
         }
 
-        .header-info {
-            display: flex;
-            gap: 40px;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: flex-start;
-            font-size: 1.1rem;
-            text-shadow: 
-                0 0 20px rgba(0,0,0,1),
-                0 0 40px rgba(0,0,0,0.9),
-                2px 2px 8px rgba(0,0,0,1);
+        .hours {
+            font-size: 1.2rem;
+            color: var(--white);
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
         }
 
-        .info-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .info-item strong {
-            color: var(--yellow);
-            text-shadow: 
-                0 0 20px rgba(0,0,0,1),
-                0 0 40px rgba(0,0,0,0.9),
-                2px 2px 8px rgba(0,0,0,1);
+        .hours-detail {
+            font-size: 0.95rem;
+            color: #cccccc;
+            line-height: 1.8;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
         }
 
         /* Container */
@@ -140,27 +141,32 @@
             padding: 60px 20px;
         }
 
-        /* Titre principal */
-        .main-title {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--yellow);
-            margin-bottom: 50px;
+        /* Sections */
+        .content-section {
+            display: none;
         }
 
-        /* Grille de cartes */
-        .cards-grid {
+        .content-section.active {
+            display: block;
+        }
+
+        #main-menu {
+            display: block;
+        }
+
+        /* Grille de catégories */
+        .categories-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
-            margin-bottom: 60px;
+            margin-top: 40px;
         }
 
         .category-card {
-            background: var(--dark);
-            border: 4px solid var(--yellow);
+            background: linear-gradient(145deg, var(--dark), #0a0a0a);
+            border: 3px solid var(--yellow);
             border-radius: 20px;
-            padding: 40px 20px;
+            padding: 40px 30px;
             text-align: center;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -175,7 +181,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 215, 10, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255,214,10,0.1), transparent);
             transition: left 0.5s;
         }
 
@@ -185,52 +191,47 @@
 
         .category-card:hover {
             transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(255, 215, 10, 0.4);
             border-color: var(--red);
+            box-shadow: 0 10px 40px rgba(230, 57, 70, 0.4);
         }
 
         .category-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 5px 10px rgba(255,214,10,0.3));
         }
 
         .category-title {
-            font-size: 1.8rem;
-            color: var(--white);
+            font-size: 2rem;
+            color: var(--yellow);
             margin-bottom: 10px;
             font-weight: bold;
         }
 
         .category-price {
-            font-size: 2.5rem;
-            color: var(--yellow);
+            font-size: 1.8rem;
+            color: var(--red);
             font-weight: bold;
-            margin: 15px 0;
+            margin-bottom: 15px;
         }
 
         .category-description {
             color: #cccccc;
-            font-size: 0.95rem;
+            font-size: 1rem;
         }
 
-        /* Section de contenu */
-        .content-section {
-            display: none;
-            animation: fadeIn 0.5s;
-        }
-
-        .content-section.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* Sections de contenu */
+        .section-title {
+            font-size: 3rem;
+            text-align: center;
+            color: var(--yellow);
+            margin-bottom: 40px;
+            text-shadow: 3px 3px 0 var(--red);
         }
 
         .back-button {
             background: var(--red);
-            color: var(--white);
+            color: white;
             border: none;
             padding: 15px 30px;
             font-size: 1.1rem;
@@ -244,19 +245,10 @@
         .back-button:hover {
             background: var(--yellow);
             color: var(--black);
-            transform: scale(1.05);
+            transform: translateX(-5px);
         }
 
-        .section-title {
-            font-size: 2.5rem;
-            color: var(--yellow);
-            text-align: center;
-            margin-bottom: 40px;
-            border-bottom: 3px solid var(--red);
-            padding-bottom: 15px;
-        }
-
-        /* Liste de produits */
+        /* Liste des produits */
         .products-list {
             display: grid;
             gap: 20px;
@@ -264,122 +256,124 @@
 
         .product-item {
             background: var(--dark);
-            padding: 25px;
+            border: 2px solid var(--yellow);
             border-radius: 15px;
-            border-left: 5px solid var(--red);
+            padding: 25px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 15px;
             transition: all 0.3s;
         }
 
         .product-item:hover {
-            background: #2a2a2a;
-            transform: translateX(10px);
-            box-shadow: 0 5px 20px rgba(255, 215, 10, 0.3);
+            border-color: var(--red);
+            transform: translateX(5px);
+            box-shadow: -5px 5px 15px rgba(230, 57, 70, 0.3);
         }
 
         .product-name {
             font-size: 1.5rem;
             color: var(--yellow);
             font-weight: bold;
-            margin-bottom: 10px;
+            grid-column: 1;
         }
 
         .product-ingredients {
+            grid-column: 1;
             color: #cccccc;
-            margin-bottom: 10px;
-            line-height: 1.6;
+            font-size: 0.95rem;
         }
 
         .product-price {
-            font-size: 1.5rem;
+            grid-column: 2;
+            grid-row: 1 / 3;
+            font-size: 2rem;
             color: var(--red);
             font-weight: bold;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 60px;
-            border-top: 3px solid var(--yellow);
-        }
-
-        footer p {
-            color: #999;
-            margin: 10px 0;
+            display: flex;
+            align-items: center;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             .restaurant-name {
+                font-size: 2.5rem;
+            }
+
+            .phone {
+                font-size: 1.5rem;
+            }
+
+            .hours {
+                font-size: 1rem;
+            }
+
+            .hours-detail {
+                font-size: 0.85rem;
+            }
+
+            .logo {
+                width: 150px;
+                height: 150px;
+            }
+
+            .section-title {
                 font-size: 2rem;
             }
-            
-            .header-info {
-                flex-direction: column;
-                gap: 20px;
-                align-items: center;
-            }
-            
-            .info-item {
-                justify-content: center;
-                text-align: center;
-            }
-            
-            .cards-grid {
-                grid-template-columns: 1fr;
-            }
-            
+
             .category-title {
                 font-size: 1.5rem;
+            }
+
+            .product-item {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .product-price {
+                grid-column: 1;
+                grid-row: auto;
+                justify-content: center;
+                margin-top: 10px;
             }
         }
     </style>
 </head>
 <body>
-
-    <!-- Header -->
+    <!-- Header avec photo de façade -->
     <header>
         <img src="facade-le-kiosque.jpg" alt="Façade Le Kiosque" class="header-background">
         <div class="header-content">
             <img src="logo-le-kiosque.svg" alt="Logo Le Kiosque" class="logo">
-            <h1 class="restaurant-name">Le Kiosque</h1>
-            <div class="header-info">
-                <div class="info-item">
-                    <span>📞</span>
-                    <span><strong>01 64 26 72 13</strong></span>
+            <h1 class="restaurant-name">LE KIOSQUE</h1>
+            <div class="restaurant-info">
+                <div class="phone">📞 01 64 26 72 13</div>
+                <div class="hours">🕐 OUVERT 7/7</div>
+                <div class="hours-detail">
+                    Lun-Jeu: 11h-14h30 | 18h-22h30<br>
+                    Vendredi: 18h-23h<br>
+                    Samedi: 11h-14h30 | 18h-23h<br>
+                    Dimanche: 11h-14h30 | 18h-22h30
                 </div>
-                <div class="info-item">
-                    <span>🕐</span>
-                    <div style="text-align: left;">
-                        <div><strong>OUVERT 7/7</strong></div>
-                        <div style="font-size: 0.9rem; margin-top: 5px; line-height: 1.4;">
-                            Lun-Jeu : 11h-14h30 | 18h-22h30<br>
-                            Vendredi : 18h-23h<br>
-                            Samedi : 11h-14h30 | 18h-23h<br>
-                            Dimanche : 11h-14h30 | 18h-22h30
-                        </div>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <span>📍</span>
-                    <span>Chelles (77500)</span>
+                <div style="margin-top: 15px; font-size: 1rem; color: var(--yellow); text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">
+                    📍 50 Rue Gambetta, 77500 Chelles
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Menu principal -->
-    <div class="container" id="mainMenu">
-        <h2 class="main-title">🍕 Notre Menu 🍕</h2>
-        
-        <div class="cards-grid">
+    <!-- Menu principal (cartes catégories) -->
+    <div class="container" id="main-menu">
+        <h2 style="font-size: 3rem; text-align: center; color: var(--yellow); margin-bottom: 40px; text-shadow: 3px 3px 0 var(--red);">
+            Notre carte
+        </h2>
+        <div class="categories-grid">
             <!-- Pizzas -->
             <div class="category-card" onclick="showSection('pizzas')">
                 <div class="category-icon">🍕</div>
                 <h3 class="category-title">NOS PIZZAS</h3>
                 <div class="category-price">Dès 5€</div>
-                <p class="category-description">Toutes nos pizzas artisanales</p>
+                <p class="category-description">33 pizzas au choix</p>
             </div>
 
             <!-- Gratins -->
@@ -387,22 +381,22 @@
                 <div class="category-icon">🥘</div>
                 <h3 class="category-title">NOS GRATINS</h3>
                 <div class="category-price">Dès 5€</div>
-                <p class="category-description">Gratins classiques et spéciaux</p>
+                <p class="category-description">Pommes de terre & reblochon</p>
             </div>
 
             <!-- Paninis -->
             <div class="category-card" onclick="showSection('paninis')">
-                <div class="category-icon">🥪</div>
+                <div class="category-icon">🥖</div>
                 <h3 class="category-title">PANINIS</h3>
                 <div class="category-price">4,50€</div>
-                <p class="category-description">Paninis chauds</p>
+                <p class="category-description">Viande hachée, Saumon & Plus</p>
             </div>
 
             <!-- Tex-Mex -->
             <div class="category-card" onclick="showSection('texmex')">
                 <div class="category-icon">🌮</div>
                 <h3 class="category-title">TEX-MEX</h3>
-                <div class="category-price">Dès 3€</div>
+                <div class="category-price">Dès 4,5€</div>
                 <p class="category-description">Nuggets, Wings & Plus</p>
             </div>
 
@@ -432,176 +426,179 @@
                     <div class="product-ingredients">Sauce tomate, fromage</div>
                     <div class="product-price">5€</div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Pizzas à 7€ et plus -->
-        <div>
-            <h3 style="font-size: 2rem; color: var(--yellow); margin-bottom: 30px; text-align: center; border-bottom: 2px solid var(--red); padding-bottom: 10px;">
-                Nos Pizzas à partir de 7€
-            </h3>
-            <div class="products-list">
-                <div class="product-item">
-                    <div class="product-name">MARGHERITA</div>
-                    <div class="product-ingredients">Sauce tomate, fromage</div>
-                    <div class="product-price">7€</div>
-                </div>
                 <div class="product-item">
                     <div class="product-name">REINE</div>
                     <div class="product-ingredients">Sauce tomate, fromage, jambon, champignons</div>
-                    <div class="product-price">8€</div>
+                    <div class="product-price">5€</div>
                 </div>
                 <div class="product-item">
                     <div class="product-name">VÉGÉTARIENNE</div>
                     <div class="product-ingredients">Sauce tomate, fromage, champignons, poivrons, olives</div>
-                    <div class="product-price">8€</div>
+                    <div class="product-price">5€</div>
                 </div>
                 <div class="product-item">
                     <div class="product-name">MERGUEZ</div>
                     <div class="product-ingredients">Sauce tomate, fromage, merguez, oignons</div>
-                    <div class="product-price">8€50</div>
+                    <div class="product-price">5€</div>
                 </div>
                 <div class="product-item">
                     <div class="product-name">VIANDE HACHÉE</div>
-                    <div class="product-ingredients">Sauce tomate, fromage, viande hachée, pommes de terre</div>
-                    <div class="product-price">8€50</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, viande hachée, pdt</div>
+                    <div class="product-price">5€</div>
                 </div>
                 <div class="product-item">
                     <div class="product-name">CALZONE (Soufflée)</div>
                     <div class="product-ingredients">Sauce tomate, fromage, œuf, jambon ou viande hachée ou thon</div>
-                    <div class="product-price">9€</div>
-                </div>
-                <div class="product-item">
-                    <div class="product-name">ORIENTALE</div>
-                    <div class="product-ingredients">Sauce tomate, fromage, œuf, poivrons, merguez</div>
-                    <div class="product-price">9€</div>
-                </div>
-                <div class="product-item">
-                    <div class="product-name">SICILIENNE</div>
-                    <div class="product-ingredients">Sauce tomate, fromage, câpres, anchois, olives</div>
-                    <div class="product-price">8€50</div>
-                </div>
-                <div class="product-item">
-                    <div class="product-name">FRUITS DE MER</div>
-                    <div class="product-ingredients">Sauce tomate, fromage, fruits de mer, ail, persil</div>
-                    <div class="product-price">10€</div>
-                </div>
-                <div class="product-item">
-                    <div class="product-name">KEBAB</div>
-                    <div class="product-ingredients">Sauce tomate, fromage, kebab, pommes de terre</div>
-                    <div class="product-price">9€</div>
-                </div>
-                <div class="product-item">
-                    <div class="product-name">BURGER</div>
-                    <div class="product-ingredients">Sauce tomate, fromage, viande hachée, cheddar, oignons</div>
-                    <div class="product-price">9€</div>
-                </div>
-                <div class="product-item">
-                    <div class="product-name">CAMPIONE</div>
-                    <div class="product-ingredients">Sauce tomate, fromage, viande hachée, œuf, champignons</div>
-                    <div class="product-price">9€50</div>
-                </div>
-                <div class="product-item">
-                    <div class="product-name">SAUMON</div>
-                    <div class="product-ingredients">Sauce tomate, fromage, jambon, champignons, artichauts, olives</div>
-                    <div class="product-price">9€50</div>
-                </div>
-                <div class="product-item">
-                    <div class="product-name">GAMBEI</div>
-                    <div class="product-ingredients">Sauce tomate, fromage, viande hachée, merguez, chorizo, sauce barbecue</div>
-                    <div class="product-price">10€</div>
-                </div>
-                <div class="product-item">
-                    <div class="product-name">BUFFALO</div>
-                    <div class="product-ingredients">Sauce tomate, fromage, viande hachée, merguez, oignons, sauce barbecue</div>
-                    <div class="product-price">9€50</div>
-                </div>
-                <div class="product-item">
-                    <div class="product-name">PIMENTO</div>
-                    <div class="product-ingredients">Sauce tomate, fromage, poulet mariné, pepperoni, piments, poivrons</div>
-                    <div class="product-price">9€50</div>
-                </div>
-                <div class="product-item">
-                    <div class="product-name">MEXICAINE</div>
-                    <div class="product-ingredients">Sauce tomate, fromage, viande hachée, merguez, poivrons, piments, sauce barbecue</div>
-                    <div class="product-price">10€</div>
+                    <div class="product-price">5€</div>
                 </div>
                 <div class="product-item">
                     <div class="product-name">CHICKEN</div>
                     <div class="product-ingredients">Crème fraîche, fromage, poulet, pommes de terre, oignons rouges</div>
-                    <div class="product-price">9€</div>
+                    <div class="product-price">5€</div>
                 </div>
                 <div class="product-item">
                     <div class="product-name">TEXANE</div>
                     <div class="product-ingredients">Crème fraîche, fromage, jambon, poulet</div>
-                    <div class="product-price">8€50</div>
+                    <div class="product-price">5€</div>
                 </div>
                 <div class="product-item">
                     <div class="product-name">PAYSANNE</div>
                     <div class="product-ingredients">Crème fraîche, fromage, jambon, poulet, oignons rouges</div>
-                    <div class="product-price">9€</div>
+                    <div class="product-price">5€</div>
                 </div>
                 <div class="product-item">
                     <div class="product-name">MIAMI</div>
                     <div class="product-ingredients">Crème fraîche, fromage, viande hachée, champignons</div>
-                    <div class="product-price">8€50</div>
+                    <div class="product-price">5€</div>
                 </div>
                 <div class="product-item">
                     <div class="product-name">CAMPAGNARDE</div>
                     <div class="product-ingredients">Crème fraîche, fromage, jambon, pommes de terre, oignons rouges</div>
-                    <div class="product-price">8€50</div>
+                    <div class="product-price">5€</div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Pizzas à 7€ -->
+        <div>
+            <h3 style="font-size: 2rem; color: var(--yellow); margin-bottom: 30px; text-align: center; border-bottom: 2px solid var(--red); padding-bottom: 10px;">
+                Nos Pizzas à 7€
+            </h3>
+            <div class="products-list">
                 <div class="product-item">
                     <div class="product-name">4 FROMAGES</div>
-                    <div class="product-ingredients">Crème fraîche, mozzarella, chèvre, brie, bleu</div>
-                    <div class="product-price">9€</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, chèvre, brie, bleu</div>
+                    <div class="product-price">7€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">PÊCHEUR</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, œuf, olives</div>
+                    <div class="product-price">7€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">ORIENTALE</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, œuf, poivrons, merguez</div>
+                    <div class="product-price">7€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">SICILIENNE</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, câpres, anchois, olives</div>
+                    <div class="product-price">7€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">FRUITS DE MER</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, fruits de mer, ail, persil</div>
+                    <div class="product-price">7€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">KEBAB</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, kebab, pommes de terre, œuf</div>
+                    <div class="product-price">7€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">BURGER</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, viande hachée, cheddar, oignons</div>
+                    <div class="product-price">7€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">CAMPIONE</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, viande hachée, œuf, champignons</div>
+                    <div class="product-price">7€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">4 SAISONS</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, jambon, champignons, artichauts, olives</div>
+                    <div class="product-price">7€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">GAMBEI</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, viande hachée, merguez, chorizo, sauce barbecue</div>
+                    <div class="product-price">7€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">BUFFALO</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, viande hachée, merguez, oignons, sauce barbecue</div>
+                    <div class="product-price">7€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">PIMENTO</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, poulet mariné, pepperoni, piments, poivrons</div>
+                    <div class="product-price">7€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">MEXICAINE</div>
+                    <div class="product-ingredients">Sauce tomate, fromage, viande hachée, poivrons, piments, sauce barbecue</div>
+                    <div class="product-price">7€</div>
                 </div>
                 <div class="product-item">
                     <div class="product-name">TARTIFLETTE</div>
                     <div class="product-ingredients">Crème fraîche, fromage, lardons, pommes de terre, oignons, reblochon</div>
-                    <div class="product-price">9€50</div>
+                    <div class="product-price">7€</div>
                 </div>
                 <div class="product-item">
                     <div class="product-name">CHÈVRE MIEL</div>
                     <div class="product-ingredients">Crème fraîche, fromage, chèvre, miel</div>
-                    <div class="product-price">9€</div>
+                    <div class="product-price">7€</div>
                 </div>
                 <div class="product-item">
                     <div class="product-name">BOURSIN</div>
-                    <div class="product-ingredients">Crème fraîche, fromage, viande hachée, pommes de terre, boursin</div>
-                    <div class="product-price">9€50</div>
+                    <div class="product-ingredients">Crème fraîche, fromage, viande hachée, pommes de terre, Boursin</div>
+                    <div class="product-price">7€</div>
                 </div>
                 <div class="product-item">
-                    <div class="product-name">CHICAGO BACON</div>
+                    <div class="product-name">CHICAGO</div>
                     <div class="product-ingredients">Crème fraîche, fromage, viande hachée, poulet, jambon, cheddar</div>
-                    <div class="product-price">10€</div>
+                    <div class="product-price">7€</div>
                 </div>
                 <div class="product-item">
                     <div class="product-name">BOLLYWOOD</div>
                     <div class="product-ingredients">Crème fraîche, fromage, poulet mariné, poivrons, oignons rouges, sauce curry</div>
-                    <div class="product-price">9€50</div>
+                    <div class="product-price">7€</div>
                 </div>
                 <div class="product-item">
-                    <div class="product-name">NORVÉGIENNE</div>
+                    <div class="product-name">NORVÉGIENNE (+1€)</div>
                     <div class="product-ingredients">Crème fraîche, fromage, saumon</div>
-                    <div class="product-price">11€</div>
+                    <div class="product-price">8€</div>
                 </div>
                 <div class="product-item">
                     <div class="product-name">RACLETTE</div>
                     <div class="product-ingredients">Crème fraîche, fromage, jambon, pommes de terre, oignons, raclette</div>
-                    <div class="product-price">9€50</div>
+                    <div class="product-price">7€</div>
                 </div>
                 <div class="product-item">
                     <div class="product-name">TACOS</div>
                     <div class="product-ingredients">Crème fraîche, fromage, poulet, viande hachée, poivrons, sauce tomatée</div>
-                    <div class="product-price">9€50</div>
+                    <div class="product-price">7€</div>
                 </div>
                 <div class="product-item">
                     <div class="product-name">FERMIÈRE</div>
                     <div class="product-ingredients">Crème fraîche, fromage, poulet, pommes de terre, champignons</div>
-                    <div class="product-price">9€</div>
+                    <div class="product-price">7€</div>
                 </div>
             </div>
+            <p style="text-align: center; color: #cccccc; margin-top: 20px; font-size: 1rem;">
+                ⭐ Suppléments : Légumes 1,00€ | Viandes 1,50€
+            </p>
         </div>
     </div>
 
@@ -617,61 +614,75 @@
             </h3>
             <div class="products-list">
                 <div class="product-item">
-                    <div class="product-name">GRATIN CLASSIQUE</div>
-                    <div class="product-ingredients">Pommes de terre à la crème avec reblochon<br>
-                    Au choix : Lardons, Viande hachée, Poulet, 3 fromages ou Jambon</div>
+                    <div class="product-name">GRATIN LARDONS</div>
+                    <div class="product-ingredients">Pommes de terre à la crème avec reblochon</div>
+                    <div class="product-price">5€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">GRATIN VIANDE HACHÉE</div>
+                    <div class="product-ingredients">Pommes de terre à la crème avec reblochon</div>
+                    <div class="product-price">5€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">GRATIN POULET</div>
+                    <div class="product-ingredients">Pommes de terre à la crème avec reblochon</div>
+                    <div class="product-price">5€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">GRATIN 3 FROMAGES</div>
+                    <div class="product-ingredients">Pommes de terre à la crème avec reblochon</div>
+                    <div class="product-price">5€</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">GRATIN JAMBON</div>
+                    <div class="product-ingredients">Pommes de terre à la crème avec reblochon</div>
                     <div class="product-price">5€</div>
                 </div>
             </div>
             <p style="text-align: center; color: var(--yellow); margin-top: 20px; font-size: 1.1rem;">
-                💡 Menu avec boisson : 6€
+                💰 Menu avec boisson : 6€
             </p>
         </div>
 
-        <!-- Gratins à 7,50€ -->
+        <!-- Gratins Spéciaux à 7,50€ -->
         <div>
             <h3 style="font-size: 2rem; color: var(--yellow); margin-bottom: 30px; text-align: center; border-bottom: 2px solid var(--red); padding-bottom: 10px;">
                 Nos Gratins Spéciaux à 7,50€
             </h3>
             <div class="products-list">
                 <div class="product-item">
-                    <div class="product-name">BOURSIN</div>
+                    <div class="product-name">GRATIN BOURSIN</div>
                     <div class="product-ingredients">Viande hachée, champignons, boursin</div>
-                    <div class="product-price">7€50</div>
+                    <div class="product-price">7,50€</div>
                 </div>
                 <div class="product-item">
-                    <div class="product-name">MEXICAIN</div>
-                    <div class="product-ingredients">Viande hachée, chorizo, poivrons, piments</div>
-                    <div class="product-price">7€50</div>
+                    <div class="product-name">GRATIN MEXICAIN</div>
+                    <div class="product-ingredients">Viande hachée, chorizo, poivrons, piment</div>
+                    <div class="product-price">7,50€</div>
                 </div>
                 <div class="product-item">
-                    <div class="product-name">RACLETTE</div>
-                    <div class="product-ingredients">Jambon, lardons, raclette</div>
-                    <div class="product-price">7€50</div>
+                    <div class="product-name">GRATIN SAVOYARD</div>
+                    <div class="product-ingredients">Jambon, lardons, raclette, oignons rouges</div>
+                    <div class="product-price">7,50€</div>
                 </div>
                 <div class="product-item">
-                    <div class="product-name">CHICKEN CURRY</div>
-                    <div class="product-ingredients">Poulet mariné, poivrons, oignons rouges, sauce curry</div>
-                    <div class="product-price">7€50</div>
+                    <div class="product-name">GRATIN CHICKEN CURRY</div>
+                    <div class="product-ingredients">Poulet mariné, poivrons, oignons</div>
+                    <div class="product-price">7,50€</div>
                 </div>
                 <div class="product-item">
-                    <div class="product-name">BURGER</div>
+                    <div class="product-name">GRATIN BURGER</div>
                     <div class="product-ingredients">Viande hachée, cheddar, oignons</div>
-                    <div class="product-price">7€50</div>
+                    <div class="product-price">7,50€</div>
                 </div>
                 <div class="product-item">
-                    <div class="product-name">FROMAGE</div>
-                    <div class="product-ingredients">3 fromages fondus</div>
-                    <div class="product-price">7€50</div>
-                </div>
-                <div class="product-item">
-                    <div class="product-name">BRAISONS</div>
-                    <div class="product-ingredients">Spécialité maison</div>
-                    <div class="product-price">7€50</div>
+                    <div class="product-name">GRATIN FROMAGER</div>
+                    <div class="product-ingredients">Brie, bleu, chèvre</div>
+                    <div class="product-price">7,50€</div>
                 </div>
             </div>
             <p style="text-align: center; color: var(--yellow); margin-top: 20px; font-size: 1.1rem;">
-                💡 Menu avec boisson : 8€
+                💰 Menu avec boisson : 8€
             </p>
         </div>
     </div>
@@ -679,53 +690,73 @@
     <!-- Section Paninis -->
     <div class="container content-section" id="paninis">
         <button class="back-button" onclick="showMainMenu()">← Retour au menu</button>
-        <h2 class="section-title">🥪 Nos Paninis 🥪</h2>
+        <h2 class="section-title">🥖 Nos Paninis 🥖</h2>
         <div class="products-list">
             <div class="product-item">
-                <div class="product-name">PANINI AU CHOIX</div>
-                <div class="product-ingredients">Viande hachée • Saumon • Poulet • 3 fromages • Jambon</div>
-                <div class="product-price">4€50</div>
+                <div class="product-name">PANINI VIANDE HACHÉE</div>
+                <div class="product-ingredients">Pain panini grillé</div>
+                <div class="product-price">4,50€</div>
+            </div>
+            <div class="product-item">
+                <div class="product-name">PANINI SAUMON</div>
+                <div class="product-ingredients">Pain panini grillé</div>
+                <div class="product-price">4,50€</div>
+            </div>
+            <div class="product-item">
+                <div class="product-name">PANINI POULET</div>
+                <div class="product-ingredients">Pain panini grillé</div>
+                <div class="product-price">4,50€</div>
+            </div>
+            <div class="product-item">
+                <div class="product-name">PANINI 3 FROMAGES</div>
+                <div class="product-ingredients">Pain panini grillé</div>
+                <div class="product-price">4,50€</div>
+            </div>
+            <div class="product-item">
+                <div class="product-name">PANINI JAMBON</div>
+                <div class="product-ingredients">Pain panini grillé</div>
+                <div class="product-price">4,50€</div>
             </div>
         </div>
-        <p style="text-align: center; color: var(--yellow); margin-top: 30px; font-size: 1.2rem;">
-            💡 Menu avec boisson : 6€
+        <p style="text-align: center; color: var(--yellow); margin-top: 30px; font-size: 1.1rem;">
+            💰 Menu avec boisson : 6€
         </p>
     </div>
 
     <!-- Section Tex-Mex -->
     <div class="container content-section" id="texmex">
         <button class="back-button" onclick="showMainMenu()">← Retour au menu</button>
-        <h2 class="section-title">🌮 Tex-Mex & Snacks 🌮</h2>
+        <h2 class="section-title">🌮 Tex-Mex 🌮</h2>
         <div class="products-list">
             <div class="product-item">
                 <div class="product-name">NUGGETS</div>
-                <div class="product-ingredients">Morceaux de poulet panés croustillants</div>
-                <div class="product-price">À partir de 3€</div>
+                <div class="product-ingredients">8 Pcs : 5,5€ | 16 Pcs : 8,5€</div>
+                <div class="product-price">5,5€</div>
             </div>
             <div class="product-item">
                 <div class="product-name">WINGS</div>
-                <div class="product-ingredients">Ailes de poulet marinées</div>
-                <div class="product-price">À partir de 4€</div>
+                <div class="product-ingredients">6 Pcs : 5€ | 12 Pcs : 8,5€</div>
+                <div class="product-price">5€</div>
             </div>
             <div class="product-item">
                 <div class="product-name">JALAPEÑOS</div>
-                <div class="product-ingredients">Piments jalapeños panés</div>
-                <div class="product-price">À partir de 3€</div>
+                <div class="product-ingredients">5 Pcs</div>
+                <div class="product-price">4,5€</div>
             </div>
             <div class="product-item">
-                <div class="product-name">MOZZARELLA STICKS</div>
-                <div class="product-ingredients">Bâtonnets de mozzarella panés</div>
-                <div class="product-price">À partir de 4€</div>
+                <div class="product-name">MOZZA STICKS</div>
+                <div class="product-ingredients">5 Pcs</div>
+                <div class="product-price">4,5€</div>
             </div>
             <div class="product-item">
                 <div class="product-name">ONION RINGS</div>
-                <div class="product-ingredients">Rondelles d'oignons panées</div>
-                <div class="product-price">À partir de 3€</div>
+                <div class="product-ingredients">10 Pcs</div>
+                <div class="product-price">4,5€</div>
             </div>
             <div class="product-item">
-                <div class="product-name">CALAMARS FRITS</div>
-                <div class="product-ingredients">Anneaux de calamar croustillants</div>
-                <div class="product-price">À partir de 5€</div>
+                <div class="product-name">CALAMARDS FRITS</div>
+                <div class="product-ingredients">10 Pcs</div>
+                <div class="product-price">4,5€</div>
             </div>
         </div>
     </div>
@@ -733,68 +764,98 @@
     <!-- Section Boissons & Desserts -->
     <div class="container content-section" id="boissons">
         <button class="back-button" onclick="showMainMenu()">← Retour au menu</button>
-        <h2 class="section-title">🥤 Boissons & Desserts 🍰</h2>
+        <h2 class="section-title">🥤 Boissons & Desserts 🥤</h2>
+        
+        <h3 style="font-size: 2rem; color: var(--yellow); margin-bottom: 30px; text-align: center; border-bottom: 2px solid var(--red); padding-bottom: 10px;">
+            Desserts
+        </h3>
         <div class="products-list">
             <div class="product-item">
                 <div class="product-name">TIRAMISU</div>
-                <div class="product-ingredients">Dessert italien traditionnel au café</div>
+                <div class="product-ingredients">Dessert italien traditionnel</div>
                 <div class="product-price">4€</div>
             </div>
+        </div>
+
+        <h3 style="font-size: 2rem; color: var(--yellow); margin: 60px 0 30px; text-align: center; border-bottom: 2px solid var(--red); padding-bottom: 10px;">
+            Boissons
+        </h3>
+        <div class="products-list">
             <div class="product-item">
-                <div class="product-name">COCA-COLA</div>
+                <div class="product-name">PEPSI</div>
                 <div class="product-ingredients">33cl</div>
                 <div class="product-price">2€</div>
             </div>
             <div class="product-item">
-                <div class="product-name">ORANGINA</div>
+                <div class="product-name">OASIS POMME CASSIS FRAMBOISE</div>
                 <div class="product-ingredients">33cl</div>
                 <div class="product-price">2€</div>
             </div>
             <div class="product-item">
-                <div class="product-name">EAU MINÉRALE</div>
+                <div class="product-name">OASIS TROPICAL</div>
+                <div class="product-ingredients">33cl</div>
+                <div class="product-price">2€</div>
+            </div>
+            <div class="product-item">
+                <div class="product-name">SCHWEPPES AGRUMES</div>
+                <div class="product-ingredients">33cl</div>
+                <div class="product-price">2€</div>
+            </div>
+            <div class="product-item">
+                <div class="product-name">SCHWEPPES CITRON</div>
+                <div class="product-ingredients">33cl</div>
+                <div class="product-price">2€</div>
+            </div>
+            <div class="product-item">
+                <div class="product-name">CRISTALINE</div>
                 <div class="product-ingredients">50cl</div>
-                <div class="product-price">1€50</div>
+                <div class="product-price">1,50€</div>
+            </div>
+            <div class="product-item">
+                <div class="product-name">CRISTALINE TROPICAL</div>
+                <div class="product-ingredients">50cl</div>
+                <div class="product-price">1,50€</div>
+            </div>
+            <div class="product-item">
+                <div class="product-name">CRISTALINE CITRON</div>
+                <div class="product-ingredients">50cl</div>
+                <div class="product-price">1,50€</div>
+            </div>
+            <div class="product-item">
+                <div class="product-name">CRISTALINE FRAISE</div>
+                <div class="product-ingredients">50cl</div>
+                <div class="product-price">1,50€</div>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p><strong style="color: var(--yellow);">Le Kiosque - Pizzeria Chelles</strong></p>
-        <p>📞 01 64 26 72 13 | 📍 Chelles 77500 | 🕐 Ouvert 7j/7</p>
-        <p style="margin-top: 15px;">Pizzeria Chelles | Pizza artisanale | À emporter & Livraison</p>
-        <p style="font-size: 0.85rem; color: #666;">© 2025 Le Kiosque. Tous droits réservés.</p>
-    </footer>
-
-    <!-- JavaScript -->
     <script>
         function showSection(sectionId) {
-            // Masquer le menu principal
-            document.getElementById('mainMenu').style.display = 'none';
-            
             // Masquer toutes les sections
-            const sections = document.querySelectorAll('.content-section');
-            sections.forEach(section => section.classList.remove('active'));
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById('main-menu').style.display = 'none';
             
             // Afficher la section demandée
             document.getElementById(sectionId).classList.add('active');
             
-            // Scroll vers le haut
+            // Scroll en haut de page
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function showMainMenu() {
-            // Afficher le menu principal
-            document.getElementById('mainMenu').style.display = 'block';
-            
             // Masquer toutes les sections
-            const sections = document.querySelectorAll('.content-section');
-            sections.forEach(section => section.classList.remove('active'));
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
             
-            // Scroll vers le haut
+            // Afficher le menu principal
+            document.getElementById('main-menu').style.display = 'block';
+            
+            // Scroll en haut de page
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
-
 </body>
 </html>
