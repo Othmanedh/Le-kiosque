@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>À propos - Le Kiosque Chelles | Notre Histoire | Pizzeria 77500</title>
+    <meta name="description" content="Découvrez l'histoire du Kiosque, pizzeria à Chelles depuis 2024. Pâte maison, passion de la pizza. 50 Rue Gambetta, 77500.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://othmanedh.github.io/Le-kiosque/about.html">
+    
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--black:#000;--dark:#1a1a1a;--yellow:#FFD60A;--red:#E63946;--white:#fff}
+        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:var(--black);color:var(--white);line-height:1.6;padding-top:80px}
+        
+        .sticky-header{position:fixed;top:0;left:0;right:0;background:rgba(0,0,0,0.95);backdrop-filter:blur(10px);padding:15px 20px;z-index:1000;box-shadow:0 2px 10px rgba(255,214,10,0.3);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+        .sticky-logo{width:50px;height:50px}
+        .sticky-phone{font-size:1.5rem;color:var(--yellow);font-weight:bold;text-decoration:none;transition:all 0.3s}
+        .sticky-phone:hover{color:var(--red);transform:scale(1.05)}
+        .sticky-nav{display:flex;gap:20px;align-items:center}
+        .sticky-nav a{color:var(--white);text-decoration:none;font-size:1rem;transition:color 0.3s;padding:5px 10px}
+        .sticky-nav a:hover{color:var(--yellow)}
+        .sticky-nav a.active{color:var(--yellow);font-weight:bold}
+
+        .container{max-width:1200px;margin:0 auto;padding:60px 20px}
+        .page-title{font-size:3rem;text-align:center;color:var(--yellow);margin-bottom:40px;text-shadow:3px 3px 0 var(--red)}
+        
+        .content-section{background:var(--dark);padding:40px;border-radius:15px;border:2px solid var(--yellow);margin-bottom:40px}
+        .content-section h2{color:var(--yellow);font-size:2.5rem;margin-bottom:25px}
+        .content-section h3{color:var(--yellow);font-size:1.8rem;margin-top:30px;margin-bottom:15px}
+        .content-section p{color:#ccc;font-size:1.1rem;line-height:1.8;margin-bottom:20px}
+        .content-section ul{color:#ccc;font-size:1.05rem;line-height:1.8;margin-left:30px;margin-bottom:20px}
+        .content-section ul li{margin-bottom:10px}
+        
+        .values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:30px}
+        .value-card{background:var(--black);padding:30px;border-radius:15px;border:2px solid var(--yellow);text-align:center;transition:all 0.3s}
+        .value-card:hover{border-color:var(--red);transform:translateY(-5px);box-shadow:0 10px 30px rgba(230,57,70,0.3)}
+        .value-icon{font-size:3.5rem;margin-bottom:15px}
+        .value-card h4{color:var(--yellow);font-size:1.5rem;margin-bottom:10px}
+        .value-card p{color:#ccc;font-size:1rem}
+
+        @media (max-width:768px){
+            body{padding-top:120px}
+            .sticky-header{flex-direction:column;gap:10px;padding:10px}
+            .sticky-phone{font-size:1.2rem}
+            .sticky-nav{flex-wrap:wrap;justify-content:center;font-size:0.9rem}
+            .page-title{font-size:2rem}
+            .content-section{padding:20px}
+            .content-section h2{font-size:2rem}
+            .content-section h3{font-size:1.5rem}
+        }
+    </style>
+</head>
+<body>
+    <div class="sticky-header">
+        <img src="logo-le-kiosque.svg" alt="Le Kiosque" class="sticky-logo" loading="lazy">
+        <a href="tel:+33164267213" class="sticky-phone">📞 01 64 26 72 13</a>
+        <nav class="sticky-nav">
+            <a href="index.html">Accueil</a>
+            <a href="about.html" class="active">À propos</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <h1 class="page-title">🍕 À propos du Kiosque</h1>
+        
+        <div class="content-section">
+            <h2>Notre Histoire</h2>
+            <p>
+                Bienvenue au <strong>Kiosque</strong>, votre nouvelle destination pour la <strong>pizza à Chelles</strong> ! Situés au <strong>50 Rue Gambetta</strong> en plein cœur de Chelles (77500), nous sommes passionnés par l'art de la pizza.
+            </p>
+            <p>
+                Notre aventure a débuté avec une vision simple : apporter à Chelles des <strong>pizzas de qualité</strong> à des prix accessibles à tous. Nous croyons que tout le monde mérite de savourer une bonne pizza, préparée avec soin, sans se ruiner.
+            </p>
+            <p>
+                C'est pourquoi nous proposons <strong>33 pizzas différentes</strong> à partir de seulement <strong>5€</strong>, toutes préparées avec notre <strong>pâte maison</strong> pétrie quotidiennement.
+            </p>
+
+            <h3>Notre Philosophie</h3>
+            <p>
+                Au Kiosque, nous ne faisons aucun compromis sur la qualité. Chaque pizza est préparée à la commande avec soin et expertise. Notre <strong>pâte à pizza est fabriquée chaque jour</strong> dans notre cuisine, garantissant une texture aérienne et un goût incomparable.
+            </p>
+
+            <h3>Au-delà de la Pizza</h3>
+            <p>
+                Bien que la pizza soit notre spécialité, nous avons également développé une gamme complète de plats savoureux pour satisfaire toutes les envies :
+            </p>
+            <ul>
+                <li><strong>Gratins gourmands</strong> aux pommes de terre et reblochon fondant</li>
+                <li><strong>Paninis généreux</strong> garnis selon vos envies</li>
+                <li><strong>Spécialités Tex-Mex</strong> pour varier les plaisirs</li>
+                <li><strong>Desserts</strong> comme notre tiramisu</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Nos Valeurs</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🍕</div>
+                    <h4>Pâte Maison</h4>
+                    <p>Pâte préparée quotidiennement dans notre cuisine</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">💰</div>
+                    <h4>Prix Justes</h4>
+                    <p>Des pizzas excellentes dès 5€ pour rendre la qualité accessible à tous</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">⚡</div>
+                    <h4>Service Rapide</h4>
+                    <p>Préparation soignée et rapide pour votre satisfaction</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🌿</div>
+                    <h4>Préparation du Jour</h4>
+                    <p>Préparation à la commande garantie</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">❤️</div>
+                    <h4>Passion</h4>
+                    <p>L'amour de la pizza au cœur de chaque création</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h4>Proximité</h4>
+                    <p>À l'écoute de nos clients pour toujours mieux vous servir</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Notre Engagement</h2>
+            <p>
+                Chez Le Kiosque, nous nous engageons à vous offrir :
+            </p>
+            <ul>
+                <li>✅ Une <strong>préparation à la commande</strong> pour une fraîcheur optimale</li>
+                <li>✅ Une <strong>pâte maison</strong> préparée chaque jour</li>
+                <li>✅ Un <strong>service 7 jours sur 7</strong> pour votre confort</li>
+                <li>✅ Des <strong>prix imbattables</strong> sans compromis sur la qualité</li>
+                <li>✅ Un <strong>service à emporter rapide</strong></li>
+                <li>✅ Un <strong>accueil chaleureux</strong> à chaque commande</li>
+            </ul>
+
+            <h3>Venez Nous Découvrir !</h3>
+            <p>
+                Que vous soyez amateur de pizzas classiques comme la Margherita ou la Reine, ou que vous préfériez des créations plus audacieuses comme notre pizza Tacos ou Bollywood, vous trouverez forcément votre bonheur parmi nos <strong>33 recettes</strong>.
+            </p>
+            <p style="text-align:center;margin-top:30px">
+                <strong style="font-size:1.3rem;color:var(--yellow)">
+                    Le Kiosque - Votre Pizzeria à Chelles
+                </strong><br>
+                <span style="color:#999;font-size:1.1rem;margin-top:10px;display:block">
+                    50 Rue Gambetta, 77500 Chelles • <a href="tel:+33164267213" style="color:var(--yellow)">01 64 26 72 13</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
