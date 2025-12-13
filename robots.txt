@@ -1,0 +1,27 @@
+# Robots.txt pour DJ Malek - Animation Mariage Paris
+# https://www.djmalek-paris.fr
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: *.pdf$
+
+# Sitemap
+Sitemap: https://www.djmalek-paris.fr/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Spécifique pour les bots populaires
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
