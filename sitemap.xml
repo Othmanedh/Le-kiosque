@@ -1,38 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
   <!-- Page d'accueil -->
   <url>
-    <loc>https://www.djmalek-paris.fr/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <loc>https://othmanedh.github.io/Le-kiosque/</loc>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://othmanedh.github.io/Le-kiosque/facade-le-kiosque.png</image:loc>
+      <image:caption>Façade Le Kiosque Pizzeria Chelles</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://othmanedh.github.io/Le-kiosque/logo-le-kiosque.svg</image:loc>
+      <image:caption>Logo Le Kiosque Chelles</image:caption>
+    </image:image>
   </url>
   
-  <!-- Section Vidéos -->
+  <!-- Page Contact -->
   <url>
-    <loc>https://www.djmalek-paris.fr/#videos</loc>
-    <lastmod>2025-12-11</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://othmanedh.github.io/Le-kiosque/contact.html</loc>
+    <lastmod>2025-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Page À propos -->
+  <url>
+    <loc>https://othmanedh.github.io/Le-kiosque/about.html</loc>
+    <lastmod>2025-12-13</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
-  <!-- Section Formules -->
+  <!-- Page FAQ -->
   <url>
-    <loc>https://www.djmalek-paris.fr/#formules</loc>
-    <lastmod>2025-12-11</lastmod>
+    <loc>https://othmanedh.github.io/Le-kiosque/faq.html</loc>
+    <lastmod>2025-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Section Pizzas -->
+  <url>
+    <loc>https://othmanedh.github.io/Le-kiosque/#pizzas</loc>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
-  <!-- Section Contact -->
+  <!-- Section Gratins -->
   <url>
-    <loc>https://www.djmalek-paris.fr/#contact</loc>
-    <lastmod>2025-12-11</lastmod>
+    <loc>https://othmanedh.github.io/Le-kiosque/#gratins</loc>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   
+  <!-- Section Paninis -->
+  <url>
+    <loc>https://othmanedh.github.io/Le-kiosque/#paninis</loc>
+    <lastmod>2025-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Section Tex-Mex -->
+  <url>
+    <loc>https://othmanedh.github.io/Le-kiosque/#texmex</loc>
+    <lastmod>2025-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Section Boissons -->
+  <url>
+    <loc>https://othmanedh.github.io/Le-kiosque/#boissons</loc>
+    <lastmod>2025-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
