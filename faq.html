@@ -4,122 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <title>FAQ - Questions Fréquentes | Le Kiosque Chelles | Pizzeria 77500</title>
-    <meta name="description" content="Toutes les réponses à vos questions sur Le Kiosque : horaires, commande, prix, paiement. Pizzeria à Chelles. ☎️ 01 64 26 72 13">
+    <title>Contact - Le Kiosque Chelles | Pizzeria 77500 | 01 64 26 72 13</title>
+    <meta name="description" content="Contactez Le Kiosque, pizzeria à Chelles (77500). 📞 01 64 26 72 13 | 📍 50 Rue Gambetta | Horaires 7j/7 | Commandez vos pizzas à emporter">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://othmanedh.github.io/Le-kiosque/faq.html">
+    <link rel="canonical" href="https://othmanedh.github.io/Le-kiosque/contact.html">
     
-    <!-- Schema FAQ pour Featured Snippets -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Quels sont vos horaires d'ouverture ?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Nous sommes ouverts 7 jours sur 7 : Du lundi au jeudi de 11h à 14h30 et de 18h à 22h30, le vendredi de 18h à 23h, le samedi de 11h à 14h30 et de 18h à 23h, et le dimanche de 11h à 14h30 et de 18h à 22h30."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Faites-vous de la livraison ?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Non, nous proposons uniquement un service à emporter. Appelez-nous au 01 64 26 72 13 pour commander et venez récupérer votre commande au 50 Rue Gambetta à Chelles."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Quels moyens de paiement acceptez-vous ?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Nous acceptons les paiements en espèces et par carte bancaire sur place."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Faites-vous des pizzas végétariennes ?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Oui ! Nous proposons plusieurs pizzas végétariennes dont la Pizza Végétarienne (champignons, poivrons, olives), la 4 Fromages, et la Chèvre Miel. Vous pouvez aussi personnaliser votre pizza."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Votre pâte à pizza est-elle faite maison ?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Oui, notre pâte est préparée fraîchement chaque jour dans notre cuisine."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Puis-je commander à l'avance ?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Oui, vous pouvez passer commande à l'avance en nous appelant au 01 64 26 72 13. Précisez simplement l'heure souhaitée pour le retrait."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Proposez-vous des menus ?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Oui, nous proposons des menus pour les gratins (gratin + boisson) et les paninis (panini + boisson à 5,50€)."
-                }
-            }
-        ]
-    }
-    </script>
-    
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        :root{--black:#000;--dark:#1a1a1a;--yellow:#FFD60A;--red:#E63946;--white:#fff}
-        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:var(--black);color:var(--white);line-height:1.6;padding-top:80px}
-        
-        .sticky-header{position:fixed;top:0;left:0;right:0;background:rgba(0,0,0,0.95);backdrop-filter:blur(10px);padding:15px 20px;z-index:1000;box-shadow:0 2px 10px rgba(255,214,10,0.3);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-        .sticky-logo{width:50px;height:50px}
-        .sticky-phone{font-size:1.5rem;color:var(--yellow);font-weight:bold;text-decoration:none;transition:all 0.3s}
-        .sticky-phone:hover{color:var(--red);transform:scale(1.05)}
-        .sticky-nav{display:flex;gap:20px;align-items:center}
-        .sticky-nav a{color:var(--white);text-decoration:none;font-size:1rem;transition:color 0.3s;padding:5px 10px}
-        .sticky-nav a:hover{color:var(--yellow)}
-        .sticky-nav a.active{color:var(--yellow);font-weight:bold}
-
-        .container{max-width:1000px;margin:0 auto;padding:60px 20px}
-        .page-title{font-size:3rem;text-align:center;color:var(--yellow);margin-bottom:20px;text-shadow:3px 3px 0 var(--red)}
-        .subtitle{text-align:center;color:#ccc;font-size:1.1rem;margin-bottom:50px}
-        
-        .faq-item{background:var(--dark);border:2px solid var(--yellow);border-radius:15px;margin-bottom:20px;overflow:hidden;transition:all 0.3s}
-        .faq-item:hover{border-color:var(--red);box-shadow:0 5px 20px rgba(230,57,70,0.3)}
-        .faq-question{padding:25px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:background 0.3s}
-        .faq-question:hover{background:rgba(255,214,10,0.1)}
-        .faq-question h3{color:var(--yellow);font-size:1.3rem;margin:0;flex:1}
-        .faq-icon{font-size:1.5rem;color:var(--yellow);transition:transform 0.3s;margin-left:15px}
-        .faq-item.active .faq-icon{transform:rotate(45deg)}
-        .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease-out}
-        .faq-item.active .faq-answer{max-height:500px}
-        .faq-answer-content{padding:0 25px 25px 25px;color:#ccc;font-size:1.05rem;line-height:1.8}
-        
-        .contact-cta{background:linear-gradient(145deg,var(--dark),var(--black));border:2px solid var(--yellow);border-radius:15px;padding:40px;text-align:center;margin-top:60px}
-        .contact-cta h2{color:var(--yellow);font-size:2rem;margin-bottom:20px}
-        .contact-cta p{color:#ccc;font-size:1.1rem;margin-bottom:25px}
-        .contact-cta a{display:inline-block;background:var(--red);color:var(--white);text-decoration:none;padding:15px 40px;border-radius:10px;font-size:1.2rem;font-weight:bold;transition:all 0.3s}
-        .contact-cta a:hover{background:var(--yellow);color:var(--black);transform:scale(1.05)}
-
-        @media (max-width:768px){
-            body{padding-top:120px}
-            .sticky-header{flex-direction:column;gap:10px;padding:10px}
-            .sticky-phone{font-size:1.2rem}
-            .sticky-nav{flex-wrap:wrap;justify-content:center;font-size:0.9rem}
-            .page-title{font-size:2rem}
-            .faq-question h3{font-size:1.1rem}
-            .faq-icon{font-size:1.2rem}
-        }
-    </style>
+    <!-- CSS Externe Optimisé -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="sticky-header">
@@ -128,180 +19,92 @@
         <nav class="sticky-nav">
             <a href="index.html">Accueil</a>
             <a href="about.html">À propos</a>
-            <a href="contact.html">Contact</a>
-            <a href="faq.html" class="active">FAQ</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="faq.html">FAQ</a>
         </nav>
     </div>
 
     <div class="container">
-        <h1 class="page-title">❓ Questions Fréquentes</h1>
-        <p class="subtitle">Toutes les réponses à vos questions sur Le Kiosque</p>
+        <h1 class="page-title">📞 Contactez-nous</h1>
         
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-                <h3>🕐 Quels sont vos horaires d'ouverture ?</h3>
-                <span class="faq-icon">+</span>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-icon">📞</div>
+                <h3>Téléphone</h3>
+                <p>
+                    <a href="tel:+33164267213">01 64 26 72 13</a><br>
+                    <span style="font-size:0.9rem;color:#999">Du lundi au dimanche<br>11h-14h30 | 18h-22h30</span>
+                </p>
             </div>
-            <div class="faq-answer">
-                <div class="faq-answer-content">
-                    Nous sommes ouverts <strong>7 jours sur 7</strong> :<br><br>
-                    <strong>Du lundi au jeudi :</strong> 11h-14h30 | 18h-22h30<br>
+
+            <div class="contact-card">
+                <div class="contact-icon">📍</div>
+                <h3>Adresse</h3>
+                <p>
+                    50 Rue Gambetta<br>
+                    77500 Chelles<br>
+                    Seine-et-Marne
+                </p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">🕐</div>
+                <h3>Horaires</h3>
+                <p style="font-size:0.95rem">
+                    <strong>Lun-Jeu :</strong> 11h-14h30 | 18h-22h30<br>
                     <strong>Vendredi :</strong> 18h-23h<br>
                     <strong>Samedi :</strong> 11h-14h30 | 18h-23h<br>
-                    <strong>Dimanche :</strong> 11h-14h30 | 18h-22h30<br><br>
-                    Appelez-nous au <a href="tel:+33164267213" style="color:var(--yellow)">01 64 26 72 13</a> pour commander !
-                </div>
+                    <strong>Dimanche :</strong> 11h-14h30 | 18h-22h30
+                </p>
             </div>
         </div>
 
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-                <h3>🚗 Faites-vous de la livraison ?</h3>
-                <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <div class="faq-answer-content">
-                    Non, nous proposons uniquement un <strong>service à emporter</strong>. Appelez-nous au <a href="tel:+33164267213" style="color:var(--yellow)">01 64 26 72 13</a> pour commander et venez récupérer votre commande au <strong>50 Rue Gambetta à Chelles</strong>.
+        <div class="form-container">
+            <h2>✉️ Envoyez-nous un message</h2>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <label for="name">Nom *</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
-            </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Sujet *</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Envoyer le message</button>
+            </form>
+            <p style="text-align:center;margin-top:20px;color:#999;font-size:0.9rem">
+                * Champs obligatoires<br>
+                Vous pouvez aussi nous appeler directement au <a href="tel:+33164267213" style="color:var(--yellow)">01 64 26 72 13</a>
+            </p>
         </div>
 
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-                <h3>💳 Quels moyens de paiement acceptez-vous ?</h3>
-                <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <div class="faq-answer-content">
-                    Nous acceptons les paiements en <strong>espèces</strong> et par <strong>carte bancaire</strong> sur place. Le paiement se fait au moment du retrait de votre commande.
-                </div>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-                <h3>🌱 Faites-vous des pizzas végétariennes ?</h3>
-                <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <div class="faq-answer-content">
-                    Oui ! Nous proposons plusieurs pizzas végétariennes :<br><br>
-                    • <strong>Pizza Végétarienne</strong> (champignons, poivrons, olives) - 5€<br>
-                    • <strong>4 Fromages</strong> (4 fromages délicieux) - 7€<br>
-                    • <strong>Chèvre Miel</strong> (fromage de chèvre et miel) - 7€<br>
-                    • <strong>Margherita</strong> (sauce tomate, fromage) - 5€<br><br>
-                    Vous pouvez aussi personnaliser votre pizza selon vos préférences !
-                </div>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-                <h3>🍕 Votre pâte à pizza est-elle faite maison ?</h3>
-                <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <div class="faq-answer-content">
-                    Oui ! Notre <strong>pâte est préparée fraîchement chaque jour</strong> dans notre cuisine.
-                </div>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-                <h3>📞 Puis-je commander à l'avance ?</h3>
-                <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <div class="faq-answer-content">
-                    Oui, vous pouvez <strong>passer commande à l'avance</strong> en nous appelant au <a href="tel:+33164267213" style="color:var(--yellow)">01 64 26 72 13</a>. Précisez simplement l'heure souhaitée pour le retrait. Parfait pour vos soirées ou événements !
-                </div>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-                <h3>🍽️ Proposez-vous des menus ?</h3>
-                <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <div class="faq-answer-content">
-                    Oui ! Nous proposons :<br><br>
-                    • <strong>Menu Gratin</strong> : Gratin (5€) + boisson = 6,50€<br>
-                    • <strong>Menu Gratin Spécial</strong> : Gratin spécial (7,50€) + boisson = 9€<br>
-                    • <strong>Menu Panini</strong> : Panini + boisson = 5,50€<br><br>
-                    Les pizzas sont vendues à l'unité, mais vous pouvez bien sûr ajouter des boissons et desserts à votre commande.
-                </div>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-                <h3>⏱️ Quel est le délai de préparation ?</h3>
-                <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <div class="faq-answer-content">
-                    Le délai moyen est de <strong>15 à 30 minutes</strong> selon l'affluence. Nous préparons chaque pizza à la commande pour garantir la fraîcheur ! Le délai exact vous sera communiqué lors de votre appel.
-                </div>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-                <h3>🎂 Faites-vous des pizzas pour les événements ?</h3>
-                <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <div class="faq-answer-content">
-                    Oui ! Nous pouvons préparer des commandes pour vos <strong>anniversaires, événements familiaux ou professionnels</strong>. Contactez-nous au <a href="tel:+33164267213" style="color:var(--yellow)">01 64 26 72 13</a> pour discuter de vos besoins.
-                </div>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-                <h3>📍 Où êtes-vous situés ?</h3>
-                <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <div class="faq-answer-content">
-                    Nous sommes situés au <strong>50 Rue Gambetta, 77500 Chelles</strong>, en plein cœur de la ville. Venez chercher votre commande directement sur place !
-                </div>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-                <h3>🧀 Puis-je personnaliser ma pizza ?</h3>
-                <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <div class="faq-answer-content">
-                    Oui ! Vous pouvez <strong>ajouter des suppléments</strong> à votre pizza :<br><br>
-                    • <strong>Légumes</strong> : 1,00€<br>
-                    • <strong>Viandes</strong> : 1,50€<br><br>
-                    Appelez-nous pour composer votre pizza sur mesure !
-                </div>
-            </div>
-        </div>
-
-        <div class="contact-cta">
-            <h2>Vous avez d'autres questions ?</h2>
-            <p>N'hésitez pas à nous contacter directement !</p>
-            <a href="tel:+33164267213">📞 Appelez-nous : 01 64 26 72 13</a>
+        <div class="maps-container">
+            <h2>📍 Où nous trouver ?</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.3!2d2.593!3d48.879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e60d3a6e8c8b89%3A0x0!2zNDjCsDUyJzQ0LjQiTiAywrAzNSczNC44IkU!5e0!3m2!1sfr!2sfr!4v1702477200000" 
+                allowfullscreen="" 
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Localisation Le Kiosque - 50 Rue Gambetta, Chelles">
+            </iframe>
         </div>
     </div>
-
-    <script>
-        function toggleFaq(element){
-            const item=element.parentElement;
-            const isActive=item.classList.contains('active');
-            document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('active'));
-            if(!isActive){
-                item.classList.add('active');
-            }
-        }
-    </script>
 </body>
 </html>
