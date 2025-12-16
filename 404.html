@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page non trouvée | Le Kiosque Chelles</title>
+    <meta name="robots" content="noindex, nofollow">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .error-container {
+            max-width: 600px;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: bold;
+            color: #FFD60A;
+            text-shadow: 3px 3px 0 #E63946;
+            margin-bottom: 20px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .pizza-emoji {
+            font-size: 5rem;
+            margin-bottom: 30px;
+            animation: rotate 10s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #FFD60A;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .btn-home {
+            display: inline-block;
+            background: #E63946;
+            color: #fff;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 10px;
+            margin-top: 30px;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+
+        .btn-home:hover, .btn-home:focus {
+            background: #FFD60A;
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(255, 214, 10, 0.5);
+        }
+
+        .contact-info {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(255, 214, 10, 0.1);
+            border-radius: 15px;
+            border: 2px solid #FFD60A;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+
+        .phone-link {
+            color: #FFD60A;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .phone-link:hover, .phone-link:focus {
+            color: #E63946;
+        }
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 5rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .pizza-emoji {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="pizza-emoji">🍕</div>
+        <div class="error-code">404</div>
+        <h1>Oups ! Cette page n'existe pas</h1>
+        <p>On dirait que cette pizza s'est envolée... 🛸</p>
+        <p>La page que vous cherchez n'est pas disponible ou a été déplacée.</p>
+        
+        <a href="/" class="btn-home">← Retour à l'accueil</a>
+
+        <div class="contact-info">
+            <p><strong>Vous cherchez à commander ?</strong></p>
+            <p>Appelez-nous directement :</p>
+            <a href="tel:+33164267213" class="phone-link">📞 01 64 26 72 13</a>
+            <p style="margin-top: 15px; font-size: 0.9rem;">
+                📍 50 Rue Gambetta, 77500 Chelles<br>
+                🕐 Ouvert 7j/7
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Log pour analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_view', {
+                'page_title': '404 - Page Not Found',
+                'page_location': window.location.href
+            });
+        }
+
+        // Redirection automatique après 30 secondes (optionnel)
+        // setTimeout(() => {
+        //     window.location.href = '/';
+        // }, 30000);
+    </script>
+</body>
+</html>

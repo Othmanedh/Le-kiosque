@@ -1,0 +1,67 @@
+{
+  "name": "Le Kiosque - Pizzeria Chelles",
+  "short_name": "Le Kiosque",
+  "description": "Pizzeria à Chelles (77500). 33 pizzas dès 5€, gratins, paninis et Tex-Mex. À emporter 7j/7. Pâte maison.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#FFD60A",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo-le-kiosque.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": [
+    "food",
+    "restaurant",
+    "pizza"
+  ],
+  "lang": "fr-FR",
+  "dir": "ltr",
+  "scope": "/",
+  "screenshots": [
+    {
+      "src": "facade-le-kiosque.jpg",
+      "sizes": "1920x1080",
+      "type": "image/jpeg"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Commander par téléphone",
+      "short_name": "Appeler",
+      "description": "Appeler Le Kiosque au 01 64 26 72 13",
+      "url": "tel:+33164267213",
+      "icons": [
+        {
+          "src": "favicon.svg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Voir le menu",
+      "short_name": "Menu",
+      "description": "Consulter notre carte complète",
+      "url": "/#pizzas",
+      "icons": [
+        {
+          "src": "favicon.svg",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
